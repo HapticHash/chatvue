@@ -10,11 +10,12 @@
                         <span class="text-info">[{{ message.name }}]: </span>  
                         <span> {{ message.message}} </span>
                         <span class="text-secondary time"> {{ message.timestamp }} </span> 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card-action">
-            <CreateMessage :name="name"/>
+            <div class="card-action">
+                <CreateMessage :name="name"/>
+            </div>
         </div>
     </div>
 </template>
