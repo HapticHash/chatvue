@@ -6,7 +6,7 @@
             <div class="card-body">
                 <p class="text-secondary nomessages" v-if="messages.length == 0">[No messages yet!]</p>
                 <div class="messages" v-chat-scroll="{always: false, smooth: true}">
-                    <div v-for="message in messages" :key="message.id">
+                    <div v-for="message in messages" :key="message.id" clas="messageGroup">
                         <span class="text-info">[{{ message.name }}]: </span>  
                         <span> {{ message.message}} </span>
                         <span class="text-secondary time"> {{ message.timestamp }} </span> 
@@ -66,6 +66,7 @@ export default {
 }
 .chat span{
     font-size: 1.2em;
+    text-align: left;
 }
 .chat .time{
     display: block;
@@ -73,6 +74,10 @@ export default {
 }
 .messages{
     max-height: 300px;
+    text-align: left;
     overflow: auto;
+}
+.messageGroup{
+    margin: 5px 0 !important; 
 }
 </style>
