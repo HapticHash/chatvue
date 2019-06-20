@@ -1,20 +1,25 @@
 <template>
-    <div class="container">
-        <div class="card login">
-            <div class="card-body">
-                <h2 class="card-title text-center"> <span class="log"> Log in </span> </h2>
-                <form @submit.prevent="login" class="text-center"> 
-                    <div class="form-group">
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="text" id="input-4" name="name" v-model="name"/>
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                                <span class="input__label-content input__label-content--hoshi">Name</span>
-                            </label>
-                        </span>
-                        <p v-if="errorText" class="text-danger">{{ errorText }} </p>
+    <div class="main">
+        <div class="inside"> 
+            <div class="container">
+                <div class="card login">
+                    <div class="card-body">
+                        <h2 class="card-title text-center"> <span class="log"> Log in </span> </h2>
+                        <img src="../assets/avatar.png" class="img-fluid avatar" alt="avatar">
+                        <form @submit.prevent="login" class="text-center"> 
+                            <div class="form-group">
+                                <span class="input input--hoshi">
+                                    <input class="input__field input__field--hoshi" type="text" id="input-4" name="name" v-model="name"/>
+                                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                        <span class="input__label-content input__label-content--hoshi">Name</span>
+                                    </label>
+                                </span>
+                                <p v-if="errorText" class="text-danger">{{ errorText }} </p>
+                            </div>
+                            <button type="submit" class="btnSubmit">Continue </button>
+                        </form>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enter in chat </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -43,24 +48,44 @@ export default {
 </script>
 
 <style>
-.container {
-    background-color: #00b7ef;
+.main{
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.inside{
+    display: table-cell;
+    vertical-align: middle;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
 }
 .card {
-
+    border-radius: 10px !important;
+    -webkit-box-shadow: 10px 13px 54px -20px rgba(51,51,51,1);
+    -moz-box-shadow: 10px 13px 54px -20px rgba(51,51,51,1);
+    box-shadow: 10px 13px 54px -20px rgba(51,51,51,1);
 }
 .card-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5vw;
-    font-weight: 600;
+    font-weight: 800;
 }
 .log{
+    margin-top: 2vw;
     display:inline-block;
     border-bottom:2px solid #00b7ef;
     padding-bottom:2px;
 }
-
+.avatar{
+    margin: 2vw auto .5vw;
+}
 /***** HOSHI Start ****/
 
 .input {
@@ -192,10 +217,28 @@ export default {
 
 /***** HOSHI END *****/
 
-.btn-primary{
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+.btnSubmit{
+    width: 15vw;
+    height: 8vh;
+    font-size: 1.2vw;
     font-weight: 600;
+    padding: 1vh 1vw; 
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+    background-color: #00b7ef;
+    box-shadow: 0 20px 30px -6px rgba(30, 161, 255, 0.5);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-bottom: 2vw;
 }
+.btnSubmit:hover{
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
 .login {
     max-width: 450px;
     margin-top: 50px;
