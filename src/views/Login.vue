@@ -2,10 +2,15 @@
     <div class="container">
         <div class="card login">
             <div class="card-body">
-                <h2 class="card-title text-center">Login</h2>
+                <h2 class="card-title text-center"> <span class="log"> Log in </span> </h2>
                 <form @submit.prevent="login" class="text-center"> 
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Please enter your Name..." name="name" v-model="name"/>
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" id="input-4" name="name" v-model="name"/>
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Name</span>
+                            </label>
+                        </span>
                         <p v-if="errorText" class="text-danger">{{ errorText }} </p>
                     </div>
                     <button type="submit" class="btn btn-primary">Enter in chat </button>
@@ -38,6 +43,159 @@ export default {
 </script>
 
 <style>
+.container {
+    background-color: #00b7ef;
+}
+.card {
+
+}
+.card-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.log{
+    display:inline-block;
+    border-bottom:2px solid #00b7ef;
+    padding-bottom:2px;
+}
+
+/***** HOSHI Start ****/
+
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	max-width: 400px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input--hoshi {
+	overflow: hidden;
+}
+
+.input__field--hoshi {
+	margin-top: 1em;
+	padding: 1em 0.25em;
+	width: 100%;
+	background: transparent;
+	color: #595F6E;
+}
+
+.input__label--hoshi {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0.25em;
+	width: 100%;
+	height: calc(100% - 1.5em);
+	text-align: left;
+	pointer-events: none;
+}
+
+.input__label-content--hoshi {
+	position: absolute;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 1px solid #B9C1CA;
+}
+
+.input__label--hoshi::after {
+	margin-top: 2px;
+	border-bottom: 4px solid red;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.input__label--hoshi-color-1::after {
+	border-color: hsl(200, 100%, 50%);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+	-webkit-animation: anim-1 0.3s forwards;
+	animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+/***** HOSHI END *****/
+
+.btn-primary{
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
 .login {
     max-width: 450px;
     margin-top: 50px;
