@@ -63,7 +63,7 @@ export default {
 .container{
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 450px;
 }
 .card {
     border-radius: 10px !important;
@@ -218,11 +218,10 @@ export default {
 /***** HOSHI END *****/
 
 .btnSubmit{
-    width: 15vw;
-    height: 8vh;
-    font-size: 1.2vw;
+    width: 60%;
+    height: calc(100% - 1em);
     font-weight: 600;
-    padding: 1vh 1vw; 
+    padding: 2vh 1vw; 
     text-transform: uppercase;
     color: white;
     border-radius: 5px;
