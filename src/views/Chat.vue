@@ -1,20 +1,24 @@
 <template>
-    <div class="container chat">
-        <h2 class="text-center">Real-Time Chat WebApp</h2>
-        <h5 class="text-white text-center">Powered by Vue.js &amp; Firebase</h5>
-        <div class="card">
-            <div class="card-body">
-                <p class="text-secondary nomessages" v-if="messages.length == 0">[No messages yet!]</p>
-                <div class="messages" v-chat-scroll="{always: false, smooth: true}">
-                    <div v-for="message in messages" :key="message.id" clas="messageGroup">
-                        <span class="text-info">[{{ message.name }}]: </span>  
-                        <span> {{ message.message}} </span>
-                        <span class="text-secondary time"> {{ message.timestamp }} </span> 
+    <div class="main">
+        <div class="inside">
+            <div class="container chat">
+                <h2 class="text-center">Simple Real-Time Chat WebApp</h2>
+                <h5 class="text-white text-center">Powered by Vue.js &amp; Firebase</h5>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-secondary nomessages" v-if="messages.length == 0">[No messages yet!]</p>
+                        <div class="messages" v-chat-scroll="{always: false, smooth: true}">
+                            <div v-for="message in messages" :key="message.id" clas="messageGroup">
+                                <span class="text-info">[{{ message.name }}]: </span>  
+                                <span> {{ message.message}} </span>
+                                <span class="text-secondary time"> {{ message.timestamp }} </span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <CreateMessage :name="name"/>
                     </div>
                 </div>
-            </div>
-            <div class="card-action">
-                <CreateMessage :name="name"/>
             </div>
         </div>
     </div>
@@ -56,9 +60,11 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
 *{
     font-family: 'Lato', sans-serif;
+}
+.container{
+    width: 60%;
 }
 .chat h2{
     font-family: 'Montserrat', sans-serif;

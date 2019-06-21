@@ -48,6 +48,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
 .main{
     display: table;
     position: absolute;
@@ -72,6 +76,7 @@ export default {
     box-shadow: 10px 13px 54px -20px rgba(51,51,51,1);
 }
 .card-title {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5vw;

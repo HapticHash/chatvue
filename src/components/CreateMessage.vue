@@ -5,7 +5,7 @@
                 <input type="text" name="message" class="form-control" placeholder="Enter message ..." v-model="newMessage">
                 <p class="text-danger" v-if="errorText">{{ errorText }}</p>
             </div>
-            <button class="btnSub" type="submit" name="action" >Submit</button>
+            <button class="btnSub" type="submit" name="action" >Send</button>
         </form>
     </div>
 </template>
