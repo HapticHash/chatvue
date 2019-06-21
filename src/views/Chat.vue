@@ -1,7 +1,7 @@
 <template>
     <div class="container chat">
-        <h2 class="text-primary text-center">Real-Time Chat WebApp</h2>
-        <h5 class="text-secondary text-center">Powered by Vue.js &amp; Firebase</h5>
+        <h2 class="text-center">Real-Time Chat WebApp</h2>
+        <h5 class="text-white text-center">Powered by Vue.js &amp; Firebase</h5>
         <div class="card">
             <div class="card-body">
                 <p class="text-secondary nomessages" v-if="messages.length == 0">[No messages yet!]</p>
@@ -56,12 +56,21 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+}
 .chat h2{
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.6em;
+    font-weight: 900;
+    margin-top: 5vh;
     margin-bottom: 0px;
 }
 .chat h5{
-    margin-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 1vh;
     margin-bottom: 40px;
 }
 .chat span{

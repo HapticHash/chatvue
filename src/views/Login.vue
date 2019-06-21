@@ -240,7 +240,6 @@ export default {
 
 .login {
     max-width: 450px;
-    margin-top: 50px;
     display: block;
     margin-left: auto;
     margin-right: auto;
