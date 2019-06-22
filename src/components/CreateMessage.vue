@@ -2,10 +2,15 @@
     <div class="container" style="margin-bottom: 30px">
         <form @submit.prevent="createMessage">
             <div class="form-group">
-                <input type="text" name="message" class="form-control" placeholder="Enter message ..." v-model="newMessage">
-                <p class="text-danger" v-if="errorText">{{ errorText }}</p>
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-4" name="message" v-model="newMessage"/>
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                        <span class="input__label-content input__label-content--hoshi">Enter a message...</span>
+                    </label>
+                    <p class="text-danger" v-if="errorText">{{ errorText }}</p>                    
+                </span>
+                <button class="btnSub" type="submit" name="action" >Send</button>
             </div>
-            <button class="btnSub" type="submit" name="action" >Send</button>
         </form>
     </div>
 </template>
@@ -56,7 +61,10 @@ export default {
     border: none;
     cursor: pointer;
     transition: all .2s ease-in-out;
-    margin: 2vw auto;
+    margin: 3.5vw auto;
+}
+.chat span {
+    font-size: 1.1em;
 }
 .btnSub:hover{
     transform: translatey(3px);

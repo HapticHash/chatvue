@@ -69,7 +69,7 @@ export default {
 .chat h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.6em;
-    font-weight: 900;
+    font-weight: bold;
     margin-top: 5vh;
     margin-bottom: 0px;
 }
