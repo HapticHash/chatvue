@@ -244,7 +244,7 @@ export default {
 }
 
 .login {
-    max-width: 460px;
+    max-width: 470px;
     display: block;
     margin-left: auto;
     margin-right: auto;
