@@ -9,7 +9,7 @@
                     </label>
                     <p class="text-danger" v-if="errorText">{{ errorText }}</p>                    
                 </span>
-                <button class="btnSub" type="submit" name="action" >Send</button>
+                <button class="btnSub" type="submit" name="action" >Send <i class="far fa-paper-plane"></i> </button>
             </div>
         </form>
     </div>

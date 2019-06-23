@@ -6,7 +6,7 @@
                 <h5 class="text-white text-center">Powered by Vue.js &amp; Firebase</h5>
                 <div class="card">
                     <div class="card-body">
-                        <p class="text-secondary nomessages" v-if="messages.length == 0">[No messages to display!]</p>
+                        <p class="text-secondary nomessages" v-if="messages.length == 0">[Wait for a while. Messages are loading.]</p>
                         <div class="messages" v-chat-scroll="{always: false, smooth: true}">
                             <div v-for="message in messages" :key="message.id" clas="messageGroup">
                                 <span class="text-info">[{{ message.name }}]: </span>  
@@ -63,13 +63,14 @@ export default {
 *{
     font-family: 'Lato', sans-serif;
 }
-.container{
-    width: 20%;
+.card{
+    width: 60%;
+    margin: 0 auto;
 }
 .chat h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.6em;
-    font-weight: 900;
+    font-weight: bold;
     margin-top: 5vh;
     margin-bottom: 0px;
 }
