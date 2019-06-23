@@ -48,7 +48,7 @@ export default {
 
 <style>
 .btnSub{
-    width: 20%;
+    width: 15%;
     height: calc(100% - 1em);
     font-weight: 600;
     padding: 2vh 1vw; 
@@ -61,10 +61,10 @@ export default {
     border: none;
     cursor: pointer;
     transition: all .2s ease-in-out;
-    margin: 3.5vw auto;
+    margin: 2vw auto;
 }
 .chat span {
-    font-size: 1.1em;
+    font-size: 1.1em !important;
 }
 .btnSub:hover{
     transform: translatey(3px);

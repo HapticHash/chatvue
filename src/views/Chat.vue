@@ -64,7 +64,7 @@ export default {
     font-family: 'Lato', sans-serif;
 }
 .container{
-    width: 60%;
+    width: 20%;
 }
 .chat h2{
     font-family: 'Montserrat', sans-serif;
