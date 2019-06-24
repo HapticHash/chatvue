@@ -9,7 +9,7 @@
                     </label>
                     <p class="text-danger" v-if="errorText">{{ errorText }}</p>                    
                 </span>
-                <button class="btnSub" type="submit" name="action" >Send <i class="far fa-paper-plane"></i> </button>
+                <button class="btnSub" type="submit" name="action" >Send <font-awesome-icon icon="angle-right" /> <font-awesome-icon :icon="['fas', 'angle-right']" class="icon alt"/> </button>
             </div>
         </form>
     </div>

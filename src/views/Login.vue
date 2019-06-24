@@ -112,8 +112,7 @@ export default {
 	border: none;
 	border-radius: 0;
 	background: #f0f0f0;
-	color: #aaa;
-	font-weight: bold;
+	color: #595F6E;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
@@ -131,7 +130,7 @@ export default {
 	padding: 1em 0.25em;
 	width: 100%;
 	background: transparent;
-	color: #595F6E;
+	color: #111;
 }
 
 .input__label--hoshi {
