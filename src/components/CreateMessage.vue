@@ -1,5 +1,5 @@
 <template>
-    <div class="container" style="margin-bottom: 30px">
+    <div class="container" style="height: 8vw;">
         <form @submit.prevent="createMessage">
             <div class="form-group">
                 <span class="input input--hoshi">

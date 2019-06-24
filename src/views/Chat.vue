@@ -11,7 +11,7 @@
                             <div v-for="message in messages" :key="message.id" class="messageGroup">
                                 <span class="text-white badge badge-new">{{ message.name }} </span>  
                                 <span> {{ message.message}} </span>
-                                <span class="text-secondary time"> {{ message.timestamp }} </span> 
+                                <span class="text-secondary time font-italic"> {{ message.timestamp }} </span> 
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ export default {
                         id: doc.id,
                         name: doc.data().name,
                         message: doc.data().message,
-                        timestamp: moment(doc.data().timestamp).format('LTS')
+                        timestamp: moment(doc.data().timestamp).format('LLL')
                     });
                 }
             });
@@ -62,15 +62,12 @@ export default {
 <style>
 *{
     font-family: 'Lato', sans-serif;
-    overflow: hidden;
 }
 .card{
     width: 60%;
     margin: 0 auto;
 }
-.card-action {
-    height: 17vh;
-}
+
 .chat h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.6em;

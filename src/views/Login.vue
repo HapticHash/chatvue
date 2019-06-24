@@ -59,6 +59,7 @@ export default {
     left: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .inside{
     display: table-cell;
@@ -244,7 +245,7 @@ export default {
 }
 
 .login {
-    max-width: 470px;
+    max-width: 460px;
     display: block;
     margin-left: auto;
     margin-right: auto;
