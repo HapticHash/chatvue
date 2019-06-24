@@ -8,8 +8,8 @@
                     <div class="card-body">
                         <p class="text-secondary nomessages" v-if="messages.length == 0">[Wait for a while. Messages are loading.]</p>
                         <div class="messages" v-chat-scroll="{always: false, smooth: true}">
-                            <div v-for="message in messages" :key="message.id" clas="messageGroup">
-                                <span class="text-info">[{{ message.name }}]: </span>  
+                            <div v-for="message in messages" :key="message.id" class="messageGroup">
+                                <span class="text-white badge badge-new">{{ message.name }} </span>  
                                 <span> {{ message.message}} </span>
                                 <span class="text-secondary time"> {{ message.timestamp }} </span> 
                             </div>
@@ -62,10 +62,14 @@ export default {
 <style>
 *{
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 .card{
     width: 60%;
     margin: 0 auto;
+}
+.card-action {
+    height: 17vh;
 }
 .chat h2{
     font-family: 'Montserrat', sans-serif;
@@ -86,7 +90,11 @@ export default {
 }
 .chat .time{
     display: block;
-    font-size: 0.7em;
+    font-size: 0.7em !important;
+}
+.badge-new{
+    background-color: #00b7ef;
+    margin-right: 5px;
 }
 .messages{
     max-height: 300px;
@@ -94,6 +102,6 @@ export default {
     overflow: auto;
 }
 .messageGroup{
-    margin: 5px 0 !important; 
+     margin: 0.5em auto;
 }
 </style>
