@@ -68,7 +68,7 @@ export default {
 .container{
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    width: auto;
 }
 .card {
     border-radius: 10px !important;

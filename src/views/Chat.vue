@@ -6,7 +6,7 @@
                 <h5 class="text-white text-center">Powered by Vue.js &amp; Firebase</h5>
                 <div class="card">
                     <div class="card-body">
-                        <p class="text-secondary nomessages" v-if="messages.length == 0">[Wait for a while. Messages are loading.]</p>
+                        <p class="text-secondary nomessages" v-if="messages.length == 0">[Messages are loading. Please wait...]</p>
                         <div class="messages" v-chat-scroll="{always: false, smooth: true}">
                             <div v-for="message in messages" :key="message.id" class="messageGroup">
                                 <span class="text-white badge badge-new">{{ message.name }} </span>  
@@ -94,7 +94,7 @@ export default {
     margin-right: 5px;
 }
 .messages{
-    max-height: 300px;
+    max-height: 310px;
     text-align: left;
     overflow: auto;
 }
