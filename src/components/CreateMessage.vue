@@ -9,7 +9,7 @@
                     </label>
                     <p class="text-danger" v-if="errorText">{{ errorText }}</p>                    
                 </span>
-                <button class="btnSub" type="submit" name="action" >Send <font-awesome-icon icon="angle-right" /> <font-awesome-icon :icon="['fas', 'angle-right']" class="icon alt"/> </button>
+                <button class="btnSub" type="submit" name="action" >Send <font-awesome-icon icon="paper-plane" class="fa"/>  </button>
             </div>
         </form>
     </div>
@@ -48,7 +48,7 @@ export default {
 
 <style>
 .btnSub{
-    width: 15%;
+    width: 20%;
     height: calc(100% - 1em);
     font-weight: 600;
     padding: 2vh 1vw; 
@@ -63,11 +63,14 @@ export default {
     transition: all .2s ease-in-out;
     margin: 2vw auto;
 }
-.chat span {
-    font-size: 1.1em !important;
-}
 .btnSub:hover{
     transform: translatey(3px);
     box-shadow: none;
+}
+.chat span {
+    font-size: 1.1em !important;
+}
+.fa{
+    margin-left: 0.5vw;
 }
 </style>

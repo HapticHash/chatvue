@@ -16,7 +16,7 @@
                                 </span>
                                 <p v-if="errorText" class="text-danger">{{ errorText }} </p>
                             </div>
-                            <button type="submit" class="btnSubmit">Continue </button>
+                            <button type="submit" class="btnSubmit">Continue</button>
                         </form>
                     </div>
                 </div>
@@ -92,6 +92,7 @@ export default {
 .avatar{
     margin: 2vw auto .5vw;
 }
+
 /***** HOSHI Start ****/
 
 .input {
