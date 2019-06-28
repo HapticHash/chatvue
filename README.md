@@ -23,17 +23,6 @@
 * [PopperJS](https://popper.js.org/) : It is a kickass library used to manage poppers in web applications
 * [VueJS](https://vuejs.org/) : It is an open-source JavaScript framework for building user interfaces and single-page applications.
 
-## Project setup
-```
-git clone https://github.com/HapticHash/chatvue.git
-
-cd chatvue 
-
-npm install
-
-npm run serve
-```
-
 ## Author
 Harshit Kumar Singh [Web Developer](http://haptichash.github.io/)
 
