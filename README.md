@@ -12,6 +12,7 @@
 
 [ChatVue](https://www.github.com/HapticHash/chatvue/) is a basic real-time chat application which was developed to learn and implement the my knowlege of VueJS. This application consist of two parts, First is login where you just have to enter your name. And second part is of chatting page which can help you in communicating with others.
 
+## Project Overview
 ![CalcVue Login demo](https://haptichash.github.io/TKDesigns/design/extras/login-preview.png)
 ![CalcVue Chat demo](https://haptichash.github.io/TKDesigns/design/extras/chat-preview.png)
 
